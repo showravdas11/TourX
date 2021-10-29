@@ -1,0 +1,44 @@
+.card-title{
+    color: #FF8D5F;
+}
+
+.price-time{
+    display: flex;
+    justify-content:space-between;
+}
+
+.card-image img{
+    transition: 1s;
+    border: 1px solid black;
+}
+
+.card-image img:hover{
+    transform: scale(0.9);
+}
+
+.book-btn::before{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    content: "";
+    background: #ff7f47;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    -webkit-clip-path: circle(27% at -3% 50%);
+    clip-path: circle(27% at -3% 50%);
+    transition: all .4s;
+    z-index: -1;
+} 
+
+.book-btn{
+    display: inline-block;
+    padding: 11px 20px 11px 30px;
+    background: #304f47;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+    position: relative;
+    z-index: 9;
+}
