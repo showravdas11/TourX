@@ -1,0 +1,33 @@
+.sevice-detail{
+    margin-top: 100px;
+} 
+
+.booking-form{
+    /* margin-top: px; */
+    padding: 60px 30px;
+    background: #304f47;
+
+}
+
+.input-group{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+ input{
+padding: 10px;
+color: #111;
+outline: none;
+font-size: 16px;
+font-weight: 300;
+width: 500px;
+}
+
+.Placeorder{
+    margin-top: 5px;
+    background-color: #FF8D5F;
+    border: none;
+    padding: 8px 25px;
+    font-weight: bold;
+}

@@ -1,0 +1,24 @@
+.add-form{
+    background-image: url('https://i.ibb.co/K9nFn6Y/photo-1421885641996-b1f3d004d401.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* margin-top: 100px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    margin: 10px 0;
+    background-color:#f6c260;
+    border: none;
+}
+
+.add{
+    background-color: #f1ae30;
+    padding: 8px 25px;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-weight: bold;
+}

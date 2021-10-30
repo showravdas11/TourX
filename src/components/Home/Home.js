@@ -21,7 +21,6 @@ import Why from '../Why/Why';
 const Home = () => {
     return (
         <div>
-            <Header></Header>
             <Banner></Banner>
             <Services></Services>
             <Why></Why>

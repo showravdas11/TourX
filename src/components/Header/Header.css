@@ -1,0 +1,12 @@
+.item{
+    text-decoration: none;
+    color: #FF7F47;
+}
+
+.signIn-btn{
+    background-color: #FF7F47;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+}
