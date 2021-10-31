@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useParams, useHistory } from 'react-router';
 import { useForm } from "react-hook-form";
 import './Placeorder.css';
 import axios from 'axios';
@@ -9,11 +9,13 @@ const Placeorder = () => {
     const { serviceId } = useParams();
 
     const { register, handleSubmit, reset } = useForm();
+    const history = useHistory();
     const onSubmit = data => {
         console.log(data)
-        axios.post('http://localhost:5000/order', data)
+        axios.post('https://tourx98.herokuapp.com/order', data)
             .then(res => {
                 console.log(res);
+                history.push('/myorder')
                 reset()
             })
     };
@@ -21,7 +23,7 @@ const Placeorder = () => {
     const [single, setSingle] = useState({})
 
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://tourx98.herokuapp.com/services')
             .then(res => res.json())
             .then(data => {
                 const s = data?.find(i => i._id == serviceId)

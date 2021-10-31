@@ -8,7 +8,7 @@ const AddNewPlace = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data)
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://tourx98.herokuapp.com/services', data)
             .then(res => {
                 console.log(res);
                 reset()

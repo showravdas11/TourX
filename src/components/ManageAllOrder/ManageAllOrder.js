@@ -5,8 +5,15 @@ const ManageAllOrder = () => {
 
     const [orders, setOrders] = useState([])
 
+    const deleteOrder = (id) => {
+        const remaining = orders.filter(
+            order => order._id !== id)
+        console.log(remaining)
+        setOrders(remaining)
+    }
+
     useEffect(() => {
-        fetch('http://localhost:5000/order')
+        fetch('https://tourx98.herokuapp.com/order')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
@@ -16,7 +23,7 @@ const ManageAllOrder = () => {
                 orders.map(order => <ManageSingleOrder
                     key={order.name}
                     order={order}
-
+                    deleteOrder={deleteOrder}
                 >
 
                 </ManageSingleOrder>)

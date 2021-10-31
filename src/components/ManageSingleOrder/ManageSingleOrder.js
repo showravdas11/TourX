@@ -1,28 +1,28 @@
 import React, { useState } from 'react';
 import './ManageSingleOrder.css'
 
-const ManageSingleOrder = ({ order }) => {
-    const [orders, setOrders] = useState()
+const ManageSingleOrder = ({ order, deleteOrder }) => {
     const { name, time, price, descliption, img } = order;
 
 
     const handledelete = id => {
-        console.log(id)
-        const url = `http://localhost:5000/order/${id}`
-        fetch(url, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.deletedCount) {
-                    alert('deleted')
-                    const remaining = orders.filter(order => order._id !== id)
-                    setOrders(remaining)
-
-                }
-
+        const isDelete = window.confirm("Are you sure you want to delete?");
+        if (isDelete) {
+            const url = `https://tourx98.herokuapp.com/order/${id}`
+            fetch(url, {
+                method: 'DELETE'
             })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount) {
+                        alert('deleted')
+                        deleteOrder(id)
+                    }
+
+                })
+        }
+
     }
     return (
         <div>
