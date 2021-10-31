@@ -45,6 +45,7 @@ const ManageSingleOrder = ({ order, deleteOrder }) => {
                         <td>{time}</td>
                         <td>
                             <button onClick={() => handledelete(order._id)} className="manage-delete-btn">Delete</button>
+                            <button className="panding mx-2">Pending</button>
                         </td>
                     </tbody>
                 </table>
