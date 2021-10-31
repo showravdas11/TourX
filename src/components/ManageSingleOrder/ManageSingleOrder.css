@@ -1,0 +1,47 @@
+.table-resposive{
+    max-width: 900px;
+    border: 1px solid cadetblue;
+    background-color: gray;
+    padding: 15px;
+    overflow: auto;
+    margin: auto;
+    border-radius: 4px;
+}
+table{
+    width: 100%;
+    font-size: 13px;
+    color: #444;
+    white-space: nowrap;
+}
+
+table>thead{
+    background-color: cadetblue;
+    color: white;
+}
+
+table>thead th{
+    padding: 15px;
+}
+table th,
+table td{
+    border: 1px solid black;
+    padding: 10px 15px;
+}
+
+table>tbody>td>img{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50px;
+    border: 3px solid white;
+}
+
+.manage-delete-btn{
+    background-color: #ff7f47;
+    padding: 8px 25px;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border: none;
+}

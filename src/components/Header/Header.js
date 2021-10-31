@@ -28,10 +28,13 @@ const Header = () => {
 
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                         <Link className="me-4 item" to="/home">Home</Link>
-                        <Link className="me-4 item" to="/about">About Us</Link>
                         {user?.email ?
                             <Link className="me-4 item" to="/myorder">Myorder</Link> :
                             <Link className="me-4 item" to="/myorder"></Link>
+                        }
+                        {user?.email ?
+                            <Link className="me-4 item" to="/manageallorder">Manage all order</Link> :
+                            <Link className="me-4 item" to="/manageallorder"></Link>
                         }
                         {user?.email ?
                             <Link className="me-4 item" to="/addnewplace">Add New Place</Link> :

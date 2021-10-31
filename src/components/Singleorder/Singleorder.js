@@ -23,6 +23,7 @@ const Singleorder = () => {
                         orders.map(order => <MyOrder
                             key={order.name}
                             order={order}
+
                         >
 
                         </MyOrder>)

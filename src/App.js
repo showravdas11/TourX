@@ -11,6 +11,9 @@ import MyOrder from './components/MyOrder/MyOrder';
 import AddNewPlace from './components/AddNewPlace/AddNewPlace';
 import About from './components/About/About';
 import Notfound from './components/Notfound/Notfound';
+import Singleorder from './components/Singleorder/Singleorder';
+import ManageAllOrder from './components/ManageAllOrder/ManageAllOrder';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -30,7 +33,10 @@ function App() {
               <About></About>
             </Route>
             <Route exact path="/myorder">
-              <MyOrder></MyOrder>
+              <Singleorder></Singleorder>
+            </Route>
+            <Route exact path="/manageallorder">
+              <ManageAllOrder></ManageAllOrder>
             </Route>
             <Route exact path="/addnewplace">
               <AddNewPlace></AddNewPlace>
@@ -45,6 +51,7 @@ function App() {
               <Notfound></Notfound>
             </Route>
           </Switch>
+          <Footer></Footer>
         </BrowserRouter>
       </AuthProvider>
 

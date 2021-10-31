@@ -8,12 +8,13 @@ import axios from 'axios';
 const Placeorder = () => {
     const { serviceId } = useParams();
 
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data)
         axios.post('http://localhost:5000/order', data)
             .then(res => {
                 console.log(res);
+                reset()
             })
     };
 
@@ -39,6 +40,7 @@ const Placeorder = () => {
                     </div>
                     <div className="col-md-6">
                         <form className="booking-form" onSubmit={handleSubmit(onSubmit)}>
+                            <h4 className="booking-title">Book This Package</h4>
                             <div className="input-group">
                                 <input {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
                             </div>

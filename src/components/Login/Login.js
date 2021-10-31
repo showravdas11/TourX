@@ -21,14 +21,14 @@ const Login = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 google-sign">
-                        <button className='sign-btn' onClick={handleGoogleLogin}>Google sign in</button>
+                        <button className='sign-btn' onClick={handleGoogleLogin}> <img src="https://img.icons8.com/color/30/000000/google-logo.png" /> Google sign in</button>
                     </div>
                     <div className="col-md-6">
                         <img className='img-fluid' src="https://i.ibb.co/VQxLRxt/Secure-login-bro.png" alt="" />
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

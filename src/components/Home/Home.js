@@ -1,6 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import Banner from '../Banner/Banner';
+import Client from '../Client/Client';
 import Header from '../Header/Header';
 import Services from '../Services/Services';
 import Why from '../Why/Why';
@@ -24,6 +25,7 @@ const Home = () => {
             <Banner></Banner>
             <Services></Services>
             <Why></Why>
+            <Client></Client>
         </div>
     );
 };
