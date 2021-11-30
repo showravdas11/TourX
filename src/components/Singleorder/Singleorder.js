@@ -1,10 +1,10 @@
 
 import React, { useEffect, useState } from 'react';
 import MyOrder from '../MyOrder/MyOrder';
-
+import useAuth from '../../hooks/useAuth'
 const Singleorder = () => {
     const [orders, setOrders] = useState([])
-
+    const { user } = useAuth()
     const deleteOrder = (id) => {
         const remaining = orders.filter(
             order => order._id !== id)
@@ -15,7 +15,10 @@ const Singleorder = () => {
     useEffect(() => {
         fetch('https://tourx98.herokuapp.com/order')
             .then(res => res.json())
-            .then(data => setOrders(data))
+            .then(data => {
+                const remaining = data.filter(service => service.email == user.email)
+                setOrders(remaining)
+            })
     }, [])
     return (
         <div>

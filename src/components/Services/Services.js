@@ -24,7 +24,6 @@ const Services = () => {
                             key={service.name}
                             service={service}
                         >
-
                         </Service>)
                     }
                 </div>
